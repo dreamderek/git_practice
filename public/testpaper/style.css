@@ -1,0 +1,37 @@
+div {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#All {
+    width: 75%;
+    /* height: 650px; */
+    margin: 0 auto;
+}
+
+#top {
+    height: 90px;
+    background-color: cornflowerblue;
+    line-height: 90px;
+    font-size: 20px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+#center {
+    line-height: 70%;
+    background-color: bisque;
+    border-radius: 0px 0px 20px 20px;
+
+}
+
+table {
+    text-align: center;
+    width: 80%;
+    padding: 2px;
+    background-color: ghostwhite;
+}
+
+td {
+    height: 40px;
+    font-size: 20px;
+}

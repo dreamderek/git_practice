@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finally</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="All">
+        <div id="top">
+            <form action="" id="add_data">
+                <samp>題目本文: </samp><input type="text" name="text">
+                <samp>內用函式: </samp> <input type="text" name="func">
+                <input type="button" value="新增題目" onclick="add()">
+            </form>
+        </div>
+        <div style="padding: 20px;" id="center">
+            <table align="center" border="1" id="data">
+                <tr>
+                    <td>id</td>
+                    <td>題目本文</td>
+                    <td>內用函式</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="db.js"></script>
+</body>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+
+<script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyBAYEcTG0Qr9iQ-7oio-2d_2kSCk0pHva8",
+        authDomain: "test-4327e.firebaseapp.com",
+        databaseURL: "https://test-4327e.firebaseio.com",
+        projectId: "test-4327e",
+        storageBucket: "test-4327e.appspot.com",
+        messagingSenderId: "714058899032",
+        appId: "1:714058899032:web:305148aa7775d8e82ff42d",
+        measurementId: "G-1LRZ7451SY"
+    };
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const db = firebase.firestore();
+    reset();
+</script>
+
+</html>
