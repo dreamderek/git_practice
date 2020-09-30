@@ -6,10 +6,10 @@ app.use('/testpaper', testpaper);
 app.use(express.static('./public'));
 
 app.get('/', (req, res) => {
-    // res.redirect('index.html');
-    res.send("test");
+    res.redirect('index.html');
+    // res.send("test");
 });
 
-app.listen(8888, () => {
+app.listen(process.env.PORT || 8888, () => {
     console.log('start work!');
 });
