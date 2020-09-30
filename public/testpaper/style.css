@@ -10,9 +10,8 @@ div {
 }
 
 #top {
-    height: 90px;
+    padding: 20px;
     background-color: cornflowerblue;
-    line-height: 90px;
     font-size: 20px;
     border-radius: 20px 20px 0px 0px;
 }
@@ -26,12 +25,13 @@ div {
 
 table {
     text-align: center;
-    width: 80%;
+    width: 100%;
     padding: 2px;
-    background-color: ghostwhite;
+    background-color: rgb(164, 197, 136);
 }
 
 td {
     height: 40px;
     font-size: 20px;
+    background-color: ghostwhite;
 }

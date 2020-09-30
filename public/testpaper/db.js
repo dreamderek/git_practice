@@ -5,7 +5,7 @@ var add = () => {
     let form = document.querySelector('form#add_data');
     let t = document.querySelectorAll('td');
 
-    db.collection('Main').doc((t.length / 4) + "").set({
+    db.collection('Main').add({
         text: form.text.value,
         func: form.func.value.split(',')
     });
@@ -27,27 +27,38 @@ var reset = () => {
         snapshot.docs.forEach(doc => {
 
             let tr = document.createElement("tr");
-            let td0 = document.createElement("td");
-            let td1 = document.createElement("td");
-            let td2 = document.createElement("td");
-            let td3 = document.createElement("td");
-            let a = document.createElement("buttom");
 
-            td0.innerHTML = doc.id;
-            td1.innerHTML = doc.data().text;
-            td2.innerHTML = doc.data().func;
+            // 以增加內文表列db資料
+            // tr.innerHTML =
+            //     `<td align="left">${doc.data().text}</td>
+            // <td>${doc.data().func}</td>
+            // <td><p id="${doc.id}" onclick="dele(this)">x</p></td>`;
 
-            a.innerHTML = "x";
-            a.setAttribute("id", doc.id);
-            a.setAttribute("onclick", "dele(this)");
-            td3.appendChild(a);
+            // 以增加taget表列db資料
 
-            tr.appendChild(td0);
+            let td1 = document.createElement("td"); {
+                td1.setAttribute("align", "left");
+                td1.innerHTML = doc.data().text;
+            }
+
+            let td2 = document.createElement("td"); {
+                td2.innerHTML = doc.data().func;
+            }
+
+            let td3 = document.createElement("td"); {
+                let d = document.createElement("p"); {
+                    d.innerHTML = "x";
+                    d.setAttribute("id", doc.id);
+                    d.setAttribute("onclick", "dele(this)");
+                }
+                td3.appendChild(d);
+            }
+
             tr.appendChild(td1);
             tr.appendChild(td2);
             tr.appendChild(td3);
             table.appendChild(tr);
         });
     });
-    return;
+    return true;
 }

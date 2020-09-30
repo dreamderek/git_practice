@@ -11,28 +11,31 @@
 <body>
     <div id="All">
         <div id="top">
-            <form action="" id="add_data">
+            <form action="post" id="add_data">
                 <samp>題目本文: </samp><input type="text" name="text">
-                <samp>內用函式: </samp> <input type="text" name="func">
+                <samp>分類標籤: </samp><input type="text" name="func">
                 <input type="button" value="新增題目" onclick="add()">
             </form>
         </div>
-        <div style="padding: 20px;" id="center">
-            <table align="center" border="1" id="data">
+        <div style="padding: 20px;line-height:150%;" id="center">
+            <table border="1" id="data">
                 <tr>
-                    <td>id</td>
-                    <td>題目本文</td>
-                    <td>內用函式</td>
-                    <td></td>
+                    <td style="width: 75%;">題目本文</td>
+                    <td style="width: 23%;">分類標籤</td>
+                    <td style="width: 2%;"></td>
                 </tr>
             </table>
         </div>
     </div>
     <script src="db.js"></script>
 </body>
+
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-analytics.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML-full">
+
+</script>
 
 <script>
     var firebaseConfig = {
@@ -48,7 +51,8 @@
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
     const db = firebase.firestore();
-    reset();
+    console.log(reset());
+    MathJax.replaceScript(this);
 </script>
 
 </html>
