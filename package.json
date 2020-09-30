@@ -1,25 +1,24 @@
 {
   "name": "finally",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node main.js"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/dreamderek/git_practice.git"
   },
   "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/dreamderek/git_practice/issues"
   },
   "homepage": "https://github.com/dreamderek/git_practice#readme",
-  "description": ""
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
