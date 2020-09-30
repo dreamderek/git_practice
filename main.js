@@ -6,7 +6,8 @@ app.use('/testpaper', testpaper);
 app.use(express.static('./public'));
 
 app.get('/', (req, res) => {
-    res.redirect('index.html');
+    // res.redirect('index.html');
+    res.send("test");
 });
 
 app.listen(8888, () => {
