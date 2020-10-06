@@ -14,14 +14,16 @@
             <form action="post" id="add_data">
                 <samp>題目本文: </samp><input type="text" name="text">
                 <samp>分類標籤: </samp><input type="text" name="func">
+                <samp>出處: </samp><input type="text" name="Origin">
                 <input type="button" value="新增題目" onclick="add()">
             </form>
         </div>
         <div style="padding: 20px;line-height:150%;" id="center">
             <table border="1" id="data">
                 <tr>
-                    <td style="width: 75%;">題目本文</td>
-                    <td style="width: 23%;">分類標籤</td>
+                    <td style="width: 68%;">題目本文</td>
+                    <td style="width: 15%;">分類標籤</td>
+                    <td style="width: 15%;">出處</td>
                     <td style="width: 2%;"></td>
                 </tr>
             </table>
@@ -33,7 +35,7 @@
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-analytics.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML-full"> -->
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML-full">
 
 </script>
 

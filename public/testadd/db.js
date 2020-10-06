@@ -7,10 +7,12 @@ var add = () => {
 
     db.collection('Main').add({
         text: form.text.value,
-        func: form.func.value.split(',')
+        func: form.func.value.split(','),
+        Origin: form.Origin.value
     });
     form.text.value = "";
     form.func.value = "";
+    form.Origin.value = "";
     reset();
 
 }
@@ -46,17 +48,22 @@ var reset = () => {
             }
 
             let td3 = document.createElement("td"); {
+                td3.innerHTML = doc.data().Origin;
+            }
+
+            let td4 = document.createElement("td"); {
                 let d = document.createElement("p"); {
                     d.innerHTML = "x";
                     d.setAttribute("id", doc.id);
                     d.setAttribute("onclick", "dele(this)");
                 }
-                td3.appendChild(d);
+                td4.appendChild(d);
             }
 
             tr.appendChild(td1);
             tr.appendChild(td2);
             tr.appendChild(td3);
+            tr.appendChild(td4);
             table.appendChild(tr);
         });
     });

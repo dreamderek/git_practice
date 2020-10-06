@@ -1,7 +1,7 @@
 let express = require('express');
 let app = express();
-let testpaper = require('./touter/testpaper.js');
-app.use('/testpaper', testpaper);
+let testpaper = require('./touter/testadd.js');
+app.use('/testadd', testpaper);
 
 app.use(express.static('./public'));
 
