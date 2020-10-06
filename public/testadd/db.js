@@ -67,9 +67,5 @@ var reset = () => {
             tr.appendChild(td4);
             table.appendChild(tr);
         });
-
-        console.log('??')
-        usemath.math();
     });
-    return true;
 }
