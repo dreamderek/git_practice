@@ -34,6 +34,7 @@ var reset = () => {
             // tr.innerHTML =
             //     `<td align="left">${doc.data().text}</td>
             // <td>${doc.data().func}</td>
+            // <td>${doc.data().Origin}</td>
             // <td><p id="${doc.id}" onclick="dele(this)">x</p></td>`;
 
             // 以增加taget表列db資料
@@ -66,6 +67,9 @@ var reset = () => {
             tr.appendChild(td4);
             table.appendChild(tr);
         });
+
+        console.log('??')
+        usemath.math();
     });
     return true;
 }
