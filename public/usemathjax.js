@@ -14,7 +14,6 @@ var usemath = {
     },
 
     math: function () {
-        console.log("work?");
         if (document.currentScript) {
             var script = document.currentScript;
             usemath.replaceScript(script, script.src);

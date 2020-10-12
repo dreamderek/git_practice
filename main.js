@@ -9,9 +9,13 @@ app.use('/list', list);
 
 app.use(express.static('./public'));
 
+
 app.get('/', (req, res) => {
     res.redirect('index.html');
-    // res.send("test");
+});
+
+app.get('/user', (req, res) => {
+    res.redirect('checkin.html');
 });
 
 app.listen(process.env.PORT || 8888, () => {
