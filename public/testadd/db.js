@@ -16,6 +16,18 @@ var add = () => {
     reset();
 
 }
+
+var edit = (e) => {
+    let form = document.querySelector('form#add_data');
+
+    db.collection('Main').doc(e.id).get().then((doc) => {
+        console.log(doc.data());
+        form.text.value = doc.data().text;
+        form.func.value = doc.data().func;
+        form.Origin.value = doc.data().Origin;
+    });
+}
+
 var dele = (e) => {
     db.collection('Main').doc(e.id).delete().then(() => {
         reset()
@@ -53,8 +65,14 @@ var reset = () => {
             }
 
             let td4 = document.createElement("td"); {
-                let d = document.createElement("p"); {
-                    d.innerHTML = "x";
+                let e = document.createElement("button"); {
+                    e.innerHTML = "編輯";
+                    e.setAttribute("id", doc.id);
+                    e.setAttribute("onclick", "edit(this)");
+                }
+                td4.appendChild(e);
+                let d = document.createElement("button"); {
+                    d.innerHTML = "刪除";
                     d.setAttribute("id", doc.id);
                     d.setAttribute("onclick", "dele(this)");
                 }
@@ -67,5 +85,7 @@ var reset = () => {
             tr.appendChild(td4);
             table.appendChild(tr);
         });
+    }).then(() => {
+        MathJax.Hub.Typeset();
     });
 }
