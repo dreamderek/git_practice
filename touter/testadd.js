@@ -1,8 +1,12 @@
-var express = require('express');
+let express = require('express');
 var router = express.Router();
 
 router.get('/', (req, res) => {
     res.redirect('./testadd/index.html');
+});
+
+router.get('/test', (req, res) => {
+    res.redirect('./test.html');
 });
 
 router.get('/about', (req, res) => {
