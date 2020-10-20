@@ -28,6 +28,7 @@ var add = () => {
     form.text.value = "";
     form.func.value = "";
     form.Origin.value = "";
+    repaint();
     reset();
 
 }
