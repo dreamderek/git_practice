@@ -15,8 +15,18 @@
     <div id="All">
         <div id="top">
             <form action="post" id="add_data">
-                <samp>題目本文: </samp><textarea name="text" id="" cols="30" rows="10"></textarea>
-                <!-- <input type="text" name="text"> -->
+                <table id="form_text">
+                    <tr style="height: 100px;">
+                        <td style="width: 4%;"><samp>題目預覽</samp></td>
+                        <td style="width: 96%;">
+                            <div id="show"></div>
+                        </td>
+                    </tr>
+                    <tr style="height: 100px;">
+                        <td><samp>題目本文</samp></td>
+                        <td style="padding: 4px 0px 0px 0px;"><textarea name="text"></textarea></td>
+                    </tr>
+                </table>
                 <samp>分類標籤: </samp><input type="text" name="func" id="form">
                 <samp>出處: </samp><input type="text" name="Origin" id="form">
                 <input type="button" value="新增題目" onclick="add()">

@@ -24,7 +24,7 @@ div {
 
 }
 
-table {
+#data {
     text-align: center;
     width: 100%;
     padding: 2px;
@@ -37,9 +37,21 @@ td {
     background-color: ghostwhite;
 }
 
-textarea {
+#form_text {
     width: 100%;
-    height: 60px;
+}
+
+textarea {
+    width: 99%;
+    height: 100%;
+    resize: none;
+}
+
+#show {
+    text-align: left;
+    background-color: papayawhip;
+    width: 100%;
+    height: 100%;
     resize: none;
 }
 

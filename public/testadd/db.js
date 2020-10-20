@@ -1,6 +1,21 @@
 let table = document.querySelector("table#data");
+let area = document.querySelector("textarea");
+let show = document.querySelector("#show");
 const start = table.innerHTML;
 
+
+// =====預覽區即時顯示=====
+area.addEventListener("input", repaint);
+
+function repaint() {
+    show.innerHTML = area.value;
+    MathJax.Hub.Typeset();
+}
+
+
+
+// =====資料庫處理=====
+// =====新增=====
 var add = () => {
     let form = document.querySelector('form#add_data');
     let t = document.querySelectorAll('td');
@@ -16,7 +31,7 @@ var add = () => {
     reset();
 
 }
-
+// =====編輯=====
 var edit = (e) => {
     let form = document.querySelector('form#add_data');
 
@@ -25,15 +40,17 @@ var edit = (e) => {
         form.text.value = doc.data().text;
         form.func.value = doc.data().func;
         form.Origin.value = doc.data().Origin;
+        repaint();
     });
 }
-
+// =====刪除=====
 var dele = (e) => {
     db.collection('Main').doc(e.id).delete().then(() => {
         reset()
     });
 
 }
+// =====重整顯示=====
 var reset = () => {
     table.innerHTML = start;
 
